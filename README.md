@@ -1,1 +1,0 @@
-# kimsinyoung2.github.io

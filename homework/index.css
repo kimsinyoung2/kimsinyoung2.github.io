@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    display: flex;  
+    border-bottom: 2px solid black;
+    background-color: white;
+    z-index: 1;
+}
+.gnb{
+    display:flex;
+    /* margin: 0 auto; */
+    text-align:center;
+    width: 940px;
+    font-size: 12px;
+    margin-left: 30px;
+}
+.gnb li{
+    margin-left: 60px;
+    width:100px;
+}
+.gnb  li > .thum{
+    display: none;
+    margin-top: 2px;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+.gnb li:hover .thum{
+    display: block;
+}
+.gnb li .thum ul{
+   display: flex;
+   justify-content: center;
+   border-bottom: 2px solid black;
+   background-color: white;
+}
+.gnb li .thum li{
+   margin:0 50px;
+   width: 200px;
+}
+.gnb li .thum li p{
+    color:grey;
+}
+#play li:first-child{
+    line-height: 30px;
+    text-align: left;
+    width: 400px;
+    /* background-color: aqua; */
+    margin-top: 90px;
+}
+#play .line{
+    width: 120px;
+    background-color: black;
+    height: 2px;
+    margin: 10px 0;
+}
+#play .button{
+    width: 120px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+#play li:last-child{
+    text-align: center;
+    width: 360px;
+}
+/*============================= header ==============================*/
+/*===================================================================*/
+.section{
+  padding-top: 102px;
+}
+.section input {
+    display: none;
+}
+.section .slidewrap{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: aqua;
+}
+.section .slidelist{
+    white-space: nowrap; 
+    font-size: 0;
+}
+.section .slidelist > li{
+    display: inline-block;
+    vertical-align: middle;
+     /* 세로 값 중간*/
+    width: 100%;
+    transition: all 0.7s;
+}
+.section .slidelist > li > a{
+    display: block;
+}
+.section .slidelist > li > a img{
+    width: 100%;
+}
+.section .slidelist label{
+    position: absolute;
+    /* z-index: 10; */
+    top: 50%;
+    transform: translateY(-50%); 
+    /* 자신을 기준으로 50% 당기기 */
+    padding: 50px;
+    cursor:  pointer;
+}
+.section .slidelist .left{
+    left: 30px;
+    background:url('./img/left.png')center center /100% no-repeat;
+}
+.section .slidelist .right{
+    right: 30px;
+    background:url('./img/right.png')center center /100% no-repeat;
+}
+.section [id="slide01"]:checked ~ .slidewrap .slidelist > li{transform: translateX(0%);}
+.section [id="slide02"]:checked ~ .slidewrap .slidelist > li{transform: translateX(-100%);}
+/*============================= banner ==============================*/
+/*===================================================================*/
+main{
+width: 1400px;
+margin: 0 auto;
+height: 1400px;
+line-height: 30px;
+}
+main .wrap{
+padding: 100px 0;
+position: absolute; 
+}
+article{
+   display: flex;
+   margin-bottom: 100px;
+}
+article:nth-child(2){
+   border-top: 2px solid black;
+   border-bottom: 2px solid black;
+   padding: 50px 0;
+}
+.text{
+    width: 1100px;
+    height: 300px;
+}
+.text p{
+    margin-top: 80px; 
+}
+#BRcar{
+    position: absolute;
+    left: 0px;
+    top:600px;
+}
+article a:hover #BRcar{
+    position: absolute;
+    top:1000px;
+    transition: 0.7s;
+}
+article img{
+    width: 300px;
+    height: 300px;
+}
+/*============================= main ================================*/
+/*===================================================================*/
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+footer .wrap{
+  width: 70%;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  color : rgb(212, 212, 212);
+}
+footer p{
+  color: grey;
+  line-height: 30px;
+  margin-top: 40px;
+}
+footer p span{
+  font-weight: bold;
+  color: white;
+}
+footer div:last-child{
+  margin: 0 auto;
+}
+footer  .town{
+  font-weight: bold;
+  color: grey;
+  text-decoration: underline;
+}

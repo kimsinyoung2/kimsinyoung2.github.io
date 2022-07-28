@@ -84,11 +84,11 @@ async function load() {
 }
 
 async function setup() {
-  myCanvas = createCanvas(480, 400);
-  videoCanvas = createCanvas(480, 400)
+  myCanvas = createCanvas(320, 240);
+  videoCanvas = createCanvas(320, 240)
   await load();
   video = createCapture(video, videoReady);
-  video.size(480, 400);
+  video.size(320, 240);
   video.hide();
   
   poseNet = ml5.poseNet(video, videoReady);

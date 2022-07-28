@@ -85,7 +85,7 @@ async function load() {
 
 async function setup() {
   myCanvas = createCanvas(400, 400);
-  videoCanvas = createCanvas(320, 240)
+  videoCanvas = createCanvas(480, 400)
   await load();
   video = createCapture(video, videoReady);
   video.size(320, 240);
